@@ -5,6 +5,7 @@ data = input_data('./IO/wchain3.in')
 
 words = Words(data['words'],data['count'])
 words.counter(True)
+words.visible()
 max_chain = words.get_max_chain(True)
 output_data('./IO/wchain.out',max_chain)
 

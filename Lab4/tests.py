@@ -11,6 +11,7 @@ class Tests(unittest.TestCase):
         data = input_data("./IO/wchain1.in")
         words = Words(data['words'],data['count'])
         words.counter()
+        words.visible()
         self.assertEqual(words.get_max_chain(), 2)
 
         data = input_data("./IO/wchain2.in")

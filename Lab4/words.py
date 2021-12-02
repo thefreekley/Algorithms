@@ -23,6 +23,7 @@ class Words:
 
         for index in range(0, len(word)):
             possible_word = word[:index] + word[index + 1:]
+            print(possible_word)
             if possible_word in self.chain_words:
                 if len_chain < self.chain_words[possible_word]:
                     len_chain = self.chain_words[possible_word]
@@ -31,6 +32,7 @@ class Words:
         self.example[word] = past_word
         if visible: self.visible(word)
         self.chain_words[word] = len_chain + 1
+
         return len_chain
 
     def get_max_chain(self, visiable=False):
